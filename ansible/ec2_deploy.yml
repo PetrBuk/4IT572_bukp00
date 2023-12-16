@@ -83,7 +83,7 @@
       amazon.aws.ec2_instance:
         instance_type: t2.medium
         region: us-east-1
-        count_tag:
-          Name: eshop
+        filters:
+          "tag:Name": "eshop"
         exact_count: 1
         wait: yes
