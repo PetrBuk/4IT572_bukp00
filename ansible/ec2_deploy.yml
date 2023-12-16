@@ -73,15 +73,8 @@
     - wait_for:
         port:
           80
-
-- name: Limit Instances to exact count
-  hosts: launched
-  connection: ssh
-
-  tasks:
     - name: Set the instances limit
       amazon.aws.ec2_instance:
-        instance_type: t2.medium
         region: us-east-1
         filters:
           "tag:Name": "eshop"
