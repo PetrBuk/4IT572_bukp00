@@ -103,14 +103,14 @@ jobs:
         with:
           token: ${{ secrets.WORKFLOW_TOKEN }}
 
-      - name: Load node modules and build folder
-        uses: actions/cache@v3.3.2
-        with:
-          path: |
-            ~/.npm
-            ./node_modules
-            ./build
-          key: ${{ runner.os }}-build-${{ github.run_id }}
+      # - name: Load node modules and build folder
+      #   uses: actions/cache@v3.3.2
+      #   with:
+      #     path: |
+      #       ~/.npm
+      #       ./node_modules
+      #       ./build
+      #     key: ${{ runner.os }}-build-${{ github.run_id }}
 
       # - name: Deploy to firebase
       #   uses: lowply/deploy-firebase@v0.0.5
